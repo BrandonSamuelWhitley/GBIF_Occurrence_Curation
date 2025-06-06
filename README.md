@@ -4,38 +4,7 @@ Author Contact Information - brandon.s.whitley@snm.ku.dk
 Date of Creation - January 2023 - Last Edited April 2025 
 Project Affiliated - "Greenland plant diversity patterns and pollination networks in a changing Arctic"
 
-Code Description -      This script has been designed to download metacollections of biodiversity plant
-                        nomenclature data from GBIF, usually for a given geographic scope (up to 3 countries).
-                        It then runs the names ascribed to the specimens through some standardization scripts, 
-                        and then checks the names against the KEW Plants of the world (POWO) database. For names which
-                        are recognized, it notes their Accepted Name. For names which are synonyms, it re-assigns
-                        the name to the accepted name. During the process, it stores all known synonym names, and 
-                        all names the taxa are listed as in the GBIF database, to allow for the accessing data 
-                        across many data sources. For cases where the name is not recognized, it is put through a 
-                        manual taxonomic expert review process to correct it, or to further leave it as unrecognized. 
-                        Then, an independent reference flora for the region is uploaded into the data, and the names
-                        are cross-checked against the reference flora. Any unrecognized names which are now recognized
-                        using the reference flora are now re-added, along with any reference flora names which were not
-                        already in the list. Remaining unrecognized names are left for manual review. After, names
-                        are flagged according to criteria of minimum specimen count, most recent contribution to the collection, and minimum data source count,
-                        while also automatically flagging occurrences derived exclusively from human observation. Flagged names
-                        undergo review by experts in the flora to determine if they need to be removed or kept. 
-                        Thereafter, the Taxon List is compared to an external list (default using the POWO database but this can
-                        also be further supplemented). By doing this, species unique to this dataset are filtered, as they contain
-                        the most potential for error. These species are then manually checked and verified or removed as needed. 
-                        The final list of taxa is also checked manually one last time. 
-
-                        This process produces a curated metacollection of GBIF occurrence data, harmonized by Accepted Name. In doing
-                        this, it also results in a curated Taxon List for the region at hand, which summarizes the contents and state of curation of the metacollection. 
-                        Additionally, it also records edits made to data, and produces an output of any removed names and why, along with 
-                        the GBIF occurrences affiliated to those names. 
-
-                        This script was written as a part of a PhD project. This script has been used for Greenland as a case study, and thus 
-                        contains many examples for Greenland in the code annotation. Note though that these examples can be found in other occurrence
-                        data too, and so they were kept in as examples for the user to understand. 
-
-                        This code is affiliated to the paper "Harmonising digitised herbarium data to enhance biodiversity knowledge: major steps
-                        towards an updated checklist for the flora of Greenland"
+Code Description -This script has been designed to download metacollections of biodiversity plant nomenclature data from GBIF, usually for a given geographic scope (up to 3 countries). It then runs the names ascribed to the specimens through some standardization scripts, and then checks the names against the KEW Plants of the world (POWO) database. For names which are recognized, it notes their Accepted Name. For names which are synonyms, it re-assigns the name to the accepted name. During the process, it stores all known synonym names, and all names the taxa are listed as in the GBIF database, to allow for the accessing data across many data sources. For cases where the name is not recognized, it is put through a manual taxonomic expert review process to correct it, or to further leave it as unrecognized. Then, an independent reference flora for the region is uploaded into the data, and the namesare cross-checked against the reference flora. Any unrecognized names which are now recognizedusing the reference flora are now re-added, along with any reference flora names which were notalready in the list. Remaining unrecognized names are left for manual review. After, names are flagged according to criteria of minimum specimen count, most recent contribution to the collection, and minimum data source count,while also automatically flagging occurrences derived exclusively from human observation. Flagged names undergo review by experts in the flora to determine if they need to be removed or kept. Thereafter, the Taxon List is compared to an external list (default using the POWO database but this can also be further supplemented). By doing this, species unique to this dataset are filtered, as they contain the most potential for error. These species are then manually checked and verified or removed as needed. The final list of taxa is also checked manually one last time. This process produces a curated metacollection of GBIF occurrence data, harmonized by Accepted Name. In doing this, it also results in a curated Taxon List for the region at hand, which summarizes the contents and state of curation of the metacollection. Additionally, it also records edits made to data, and produces an output of any removed names and why, along with the GBIF occurrences affiliated to those names. This script was written as a part of a PhD project. This script has been used for Greenland as a case study, and thus contains many examples for Greenland in the code annotation. Note though that these examples can be found in other occurrence data too, and so they were kept in as examples for the user to understand. This code is affiliated to the paper "Harmonising digitised herbarium data to enhance biodiversity knowledge: major steps towards an updated checklist for the flora of Greenland"
 
 Input Information Required - 
  (1) GBIF Login Information for the given user
